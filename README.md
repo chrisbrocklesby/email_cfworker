@@ -11,9 +11,9 @@ This email api is a Cloudflare Worker that allows you to send emails from your a
 
 ```
 curl  -X POST \
-  '<< Cloudflare Worker Address>>' \
+  '<<CF_WORKER_URL_HERE>>' \
   --header 'Accept: */*' \
-  --header 'Authorization: Bearer <<TOKEN HERE>>' \
+  --header 'Authorization: Bearer <<TOKEN_HERE>>' \
   --header 'Content-Type: application/json' \
   --data-raw '{
   "to": [
