@@ -1,4 +1,4 @@
-# Email API - Cloudflare Worker
+# Email API - Cloudflare Worker 📨
 
 This email api is a Cloudflare Worker that allows you to send emails from your app using Cloudflare Workers and its partener provider MailChannel.net (Free email transations via Cloudflare workers).
 
