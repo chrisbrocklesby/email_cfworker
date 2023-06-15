@@ -3,7 +3,7 @@
 This email api is a Cloudflare Worker that allows you to send emails from your app using Cloudflare Workers and its partener provider MailChannel.net (Free email transations via Cloudflare workers).
 
 ## Setup
-- Get Cloudflare Worker Address
+- Get Cloudflare Worker Address <<CF_WORKER_URL_HERE>>
 - Set up in Cloudflare Workers a "EMAIL_TOKEN" env secret choose a random string.
 - Call API with EMAIL_TOKEN in the Authorization header, and the email data in the body. (Example below).
 
