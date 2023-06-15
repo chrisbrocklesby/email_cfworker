@@ -23,8 +23,8 @@ export default {
             "to": body.to || [],
           }],
           "from": {
-            "email": body.from.email || " ",
-            "name": body.from.name || " ",
+            "name": body.from.name || body.from.email,
+            "email": body.from.email || " "
           },
           "subject": body.subject || " ",
           "content": (body.text) ? [{

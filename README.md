@@ -18,13 +18,13 @@ curl  -X POST \
   --data-raw '{
   "to": [
     {
-      "email": "to@user.com",
-      "name": "To User Name"
+      "name": "To User Name",
+      "email": "to@user.com"
     }
   ],
   "from": {
-    "email": "from@user.com",
-    "name": "From User Name"
+    "name": "From User Name",
+    "email": "from@user.com"
   },
   "subject": "Email Subject",
   "html": "<h1>HTML</h1>" // <-- This will be ignored if text is present
