@@ -16,12 +16,10 @@ curl  -X POST \
   --header 'Authorization: Bearer <<TOKEN_HERE>>' \
   --header 'Content-Type: application/json' \
   --data-raw '{
-  "to": [
-    {
+  "to": [{
       "name": "To User Name",
       "email": "to@user.com"
-    }
-  ],
+  }],
   "from": {
     "name": "From User Name",
     "email": "from@user.com"
