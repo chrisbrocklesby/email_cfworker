@@ -1,5 +1,5 @@
 export default {
-  async fetch(request, env) {
+  async fetch (request, env) {
     if (request.method === 'POST') {
       const token = request.headers.get('authorization').replace('Bearer ', '')
 
@@ -29,22 +29,24 @@ export default {
           subject: body.subject || ' ',
           content: (body.text)
             ? [{
-              type: 'text/plain',
-              value: body.text || ' '
-            }]
+                type: 'text/plain',
+                value: body.text || ' '
+              }]
             : [{
-              type: 'text/html',
-              value: body.html || ' '
-            }]
+                type: 'text/html',
+                value: body.html || ' '
+              }]
         })
       })
+
+      const mailchannel = await response.json()
 
       // Debugging Logs
       console.log(
         JSON.stringify({
           status: response.status,
           message: response.statusText,
-          response: await response.json()
+          response: mailchannel
         })
       )
 
@@ -52,10 +54,10 @@ export default {
         JSON.stringify({
           status: response.status,
           message: response.statusText,
-          response: await response.json()
+          response: mailchannel
         }), {
-        status: response.status || 400
-      }
+          status: response.status || 400
+        }
       )
     } else {
       return new Response(
@@ -63,10 +65,9 @@ export default {
           status: 404,
           message: 'POST request only'
         }), {
-        status: 404
-      }
+          status: 404
+        }
       )
     }
   }
 }
-
